@@ -15,6 +15,9 @@
 		101FD6142210C605006E46FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 101FD6132210C605006E46FE /* main.m */; };
 		101FD61E2210C606006E46FE /* DALITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 101FD61D2210C606006E46FE /* DALITests.m */; };
 		101FD6292210C606006E46FE /* DALIUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 101FD6282210C606006E46FE /* DALIUITests.m */; };
+		101FD6392210CDAC006E46FE /* dali_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 101FD6372210CDAC006E46FE /* dali_logo.png */; };
+		101FD63A2210CDAC006E46FE /* app_header.png in Resources */ = {isa = PBXBuildFile; fileRef = 101FD6382210CDAC006E46FE /* app_header.png */; };
+		60832AD999C2C026A47DCE24 /* libPods-DALI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0D96FC30018C4949FCCD7BE /* libPods-DALI.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,11 @@
 		101FD6242210C606006E46FE /* DALIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DALIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		101FD6282210C606006E46FE /* DALIUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DALIUITests.m; sourceTree = "<group>"; };
 		101FD62A2210C606006E46FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		101FD6372210CDAC006E46FE /* dali_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dali_logo.png; sourceTree = "<group>"; };
+		101FD6382210CDAC006E46FE /* app_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_header.png; sourceTree = "<group>"; };
+		249954E671B24ECA528546EA /* Pods-DALI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DALI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DALI/Pods-DALI.debug.xcconfig"; sourceTree = "<group>"; };
+		C7D850C1E5E45A3928BB29F4 /* Pods-DALI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DALI.release.xcconfig"; path = "Pods/Target Support Files/Pods-DALI/Pods-DALI.release.xcconfig"; sourceTree = "<group>"; };
+		E0D96FC30018C4949FCCD7BE /* libPods-DALI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DALI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60832AD999C2C026A47DCE24 /* libPods-DALI.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +94,8 @@
 				101FD61C2210C605006E46FE /* DALITests */,
 				101FD6272210C606006E46FE /* DALIUITests */,
 				101FD6022210C603006E46FE /* Products */,
+				669F70B0B4D40531B602FAFC /* Pods */,
+				96178347CE7ECC6F3A9B347F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +112,7 @@
 		101FD6032210C603006E46FE /* DALI */ = {
 			isa = PBXGroup;
 			children = (
+				101FD6362210CDAC006E46FE /* res */,
 				101FD6042210C603006E46FE /* AppDelegate.h */,
 				101FD6052210C603006E46FE /* AppDelegate.m */,
 				101FD6072210C603006E46FE /* ViewController.h */,
@@ -132,6 +144,32 @@
 			path = DALIUITests;
 			sourceTree = "<group>";
 		};
+		101FD6362210CDAC006E46FE /* res */ = {
+			isa = PBXGroup;
+			children = (
+				101FD6372210CDAC006E46FE /* dali_logo.png */,
+				101FD6382210CDAC006E46FE /* app_header.png */,
+			);
+			path = res;
+			sourceTree = SOURCE_ROOT;
+		};
+		669F70B0B4D40531B602FAFC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				249954E671B24ECA528546EA /* Pods-DALI.debug.xcconfig */,
+				C7D850C1E5E45A3928BB29F4 /* Pods-DALI.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		96178347CE7ECC6F3A9B347F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E0D96FC30018C4949FCCD7BE /* libPods-DALI.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +177,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 101FD62D2210C606006E46FE /* Build configuration list for PBXNativeTarget "DALI" */;
 			buildPhases = (
+				0B37B304C235596EF6658D4B /* [CP] Check Pods Manifest.lock */,
 				101FD5FD2210C603006E46FE /* Sources */,
 				101FD5FE2210C603006E46FE /* Frameworks */,
 				101FD5FF2210C603006E46FE /* Resources */,
+				3B2763A5CB13FAC756D4E9D7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,8 +275,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				101FD63A2210CDAC006E46FE /* app_header.png in Resources */,
 				101FD6112210C605006E46FE /* LaunchScreen.storyboard in Resources */,
 				101FD60E2210C605006E46FE /* Assets.xcassets in Resources */,
+				101FD6392210CDAC006E46FE /* dali_logo.png in Resources */,
 				101FD60C2210C603006E46FE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +298,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B37B304C235596EF6658D4B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DALI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B2763A5CB13FAC756D4E9D7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DALI/Pods-DALI-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DALI/Pods-DALI-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		101FD5FD2210C603006E46FE /* Sources */ = {
@@ -433,6 +524,7 @@
 		};
 		101FD62E2210C606006E46FE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 249954E671B24ECA528546EA /* Pods-DALI.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -450,6 +542,7 @@
 		};
 		101FD62F2210C606006E46FE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7D850C1E5E45A3928BB29F4 /* Pods-DALI.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
