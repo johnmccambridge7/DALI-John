@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		101FD6062210C603006E46FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 101FD6052210C603006E46FE /* AppDelegate.m */; };
+		101FD6092210C603006E46FE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 101FD6082210C603006E46FE /* ViewController.m */; };
+		101FD60C2210C603006E46FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101FD60A2210C603006E46FE /* Main.storyboard */; };
+		101FD60E2210C605006E46FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 101FD60D2210C605006E46FE /* Assets.xcassets */; };
+		101FD6112210C605006E46FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101FD60F2210C605006E46FE /* LaunchScreen.storyboard */; };
+		101FD6142210C605006E46FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 101FD6132210C605006E46FE /* main.m */; };
+		101FD61E2210C606006E46FE /* DALITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 101FD61D2210C606006E46FE /* DALITests.m */; };
+		101FD6292210C606006E46FE /* DALIUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 101FD6282210C606006E46FE /* DALIUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		101FD61A2210C605006E46FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 101FD5F92210C603006E46FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 101FD6002210C603006E46FE;
+			remoteInfo = DALI;
+		};
+		101FD6252210C606006E46FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 101FD5F92210C603006E46FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 101FD6002210C603006E46FE;
+			remoteInfo = DALI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		101FD6012210C603006E46FE /* DALI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DALI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		101FD6042210C603006E46FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		101FD6052210C603006E46FE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		101FD6072210C603006E46FE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		101FD6082210C603006E46FE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		101FD60B2210C603006E46FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		101FD60D2210C605006E46FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		101FD6102210C605006E46FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		101FD6122210C605006E46FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		101FD6132210C605006E46FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		101FD6192210C605006E46FE /* DALITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DALITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		101FD61D2210C606006E46FE /* DALITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DALITests.m; sourceTree = "<group>"; };
+		101FD61F2210C606006E46FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		101FD6242210C606006E46FE /* DALIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DALIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		101FD6282210C606006E46FE /* DALIUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DALIUITests.m; sourceTree = "<group>"; };
+		101FD62A2210C606006E46FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		101FD5FE2210C603006E46FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		101FD6162210C605006E46FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		101FD6212210C606006E46FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		101FD5F82210C603006E46FE = {
+			isa = PBXGroup;
+			children = (
+				101FD6032210C603006E46FE /* DALI */,
+				101FD61C2210C605006E46FE /* DALITests */,
+				101FD6272210C606006E46FE /* DALIUITests */,
+				101FD6022210C603006E46FE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		101FD6022210C603006E46FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				101FD6012210C603006E46FE /* DALI.app */,
+				101FD6192210C605006E46FE /* DALITests.xctest */,
+				101FD6242210C606006E46FE /* DALIUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		101FD6032210C603006E46FE /* DALI */ = {
+			isa = PBXGroup;
+			children = (
+				101FD6042210C603006E46FE /* AppDelegate.h */,
+				101FD6052210C603006E46FE /* AppDelegate.m */,
+				101FD6072210C603006E46FE /* ViewController.h */,
+				101FD6082210C603006E46FE /* ViewController.m */,
+				101FD60A2210C603006E46FE /* Main.storyboard */,
+				101FD60D2210C605006E46FE /* Assets.xcassets */,
+				101FD60F2210C605006E46FE /* LaunchScreen.storyboard */,
+				101FD6122210C605006E46FE /* Info.plist */,
+				101FD6132210C605006E46FE /* main.m */,
+			);
+			path = DALI;
+			sourceTree = "<group>";
+		};
+		101FD61C2210C605006E46FE /* DALITests */ = {
+			isa = PBXGroup;
+			children = (
+				101FD61D2210C606006E46FE /* DALITests.m */,
+				101FD61F2210C606006E46FE /* Info.plist */,
+			);
+			path = DALITests;
+			sourceTree = "<group>";
+		};
+		101FD6272210C606006E46FE /* DALIUITests */ = {
+			isa = PBXGroup;
+			children = (
+				101FD6282210C606006E46FE /* DALIUITests.m */,
+				101FD62A2210C606006E46FE /* Info.plist */,
+			);
+			path = DALIUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		101FD6002210C603006E46FE /* DALI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 101FD62D2210C606006E46FE /* Build configuration list for PBXNativeTarget "DALI" */;
+			buildPhases = (
+				101FD5FD2210C603006E46FE /* Sources */,
+				101FD5FE2210C603006E46FE /* Frameworks */,
+				101FD5FF2210C603006E46FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DALI;
+			productName = DALI;
+			productReference = 101FD6012210C603006E46FE /* DALI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		101FD6182210C605006E46FE /* DALITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 101FD6302210C606006E46FE /* Build configuration list for PBXNativeTarget "DALITests" */;
+			buildPhases = (
+				101FD6152210C605006E46FE /* Sources */,
+				101FD6162210C605006E46FE /* Frameworks */,
+				101FD6172210C605006E46FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				101FD61B2210C605006E46FE /* PBXTargetDependency */,
+			);
+			name = DALITests;
+			productName = DALITests;
+			productReference = 101FD6192210C605006E46FE /* DALITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		101FD6232210C606006E46FE /* DALIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 101FD6332210C606006E46FE /* Build configuration list for PBXNativeTarget "DALIUITests" */;
+			buildPhases = (
+				101FD6202210C606006E46FE /* Sources */,
+				101FD6212210C606006E46FE /* Frameworks */,
+				101FD6222210C606006E46FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				101FD6262210C606006E46FE /* PBXTargetDependency */,
+			);
+			name = DALIUITests;
+			productName = DALIUITests;
+			productReference = 101FD6242210C606006E46FE /* DALIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		101FD5F92210C603006E46FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "John MacDonald";
+				TargetAttributes = {
+					101FD6002210C603006E46FE = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					101FD6182210C605006E46FE = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 101FD6002210C603006E46FE;
+					};
+					101FD6232210C606006E46FE = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 101FD6002210C603006E46FE;
+					};
+				};
+			};
+			buildConfigurationList = 101FD5FC2210C603006E46FE /* Build configuration list for PBXProject "DALI" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 101FD5F82210C603006E46FE;
+			productRefGroup = 101FD6022210C603006E46FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				101FD6002210C603006E46FE /* DALI */,
+				101FD6182210C605006E46FE /* DALITests */,
+				101FD6232210C606006E46FE /* DALIUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		101FD5FF2210C603006E46FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				101FD6112210C605006E46FE /* LaunchScreen.storyboard in Resources */,
+				101FD60E2210C605006E46FE /* Assets.xcassets in Resources */,
+				101FD60C2210C603006E46FE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		101FD6172210C605006E46FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		101FD6222210C606006E46FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		101FD5FD2210C603006E46FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				101FD6092210C603006E46FE /* ViewController.m in Sources */,
+				101FD6142210C605006E46FE /* main.m in Sources */,
+				101FD6062210C603006E46FE /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		101FD6152210C605006E46FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				101FD61E2210C606006E46FE /* DALITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		101FD6202210C606006E46FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				101FD6292210C606006E46FE /* DALIUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		101FD61B2210C605006E46FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 101FD6002210C603006E46FE /* DALI */;
+			targetProxy = 101FD61A2210C605006E46FE /* PBXContainerItemProxy */;
+		};
+		101FD6262210C606006E46FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 101FD6002210C603006E46FE /* DALI */;
+			targetProxy = 101FD6252210C606006E46FE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		101FD60A2210C603006E46FE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				101FD60B2210C603006E46FE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		101FD60F2210C605006E46FE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				101FD6102210C605006E46FE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		101FD62B2210C606006E46FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		101FD62C2210C606006E46FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		101FD62E2210C606006E46FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DQGCJJL2D7;
+				INFOPLIST_FILE = DALI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = JohnCo.DALI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		101FD62F2210C606006E46FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DQGCJJL2D7;
+				INFOPLIST_FILE = DALI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = JohnCo.DALI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		101FD6312210C606006E46FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DQGCJJL2D7;
+				INFOPLIST_FILE = DALITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = JohnCo.DALITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DALI.app/DALI";
+			};
+			name = Debug;
+		};
+		101FD6322210C606006E46FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DQGCJJL2D7;
+				INFOPLIST_FILE = DALITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = JohnCo.DALITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DALI.app/DALI";
+			};
+			name = Release;
+		};
+		101FD6342210C606006E46FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DQGCJJL2D7;
+				INFOPLIST_FILE = DALIUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = JohnCo.DALIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DALI;
+			};
+			name = Debug;
+		};
+		101FD6352210C606006E46FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DQGCJJL2D7;
+				INFOPLIST_FILE = DALIUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = JohnCo.DALIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DALI;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		101FD5FC2210C603006E46FE /* Build configuration list for PBXProject "DALI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				101FD62B2210C606006E46FE /* Debug */,
+				101FD62C2210C606006E46FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		101FD62D2210C606006E46FE /* Build configuration list for PBXNativeTarget "DALI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				101FD62E2210C606006E46FE /* Debug */,
+				101FD62F2210C606006E46FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		101FD6302210C606006E46FE /* Build configuration list for PBXNativeTarget "DALITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				101FD6312210C606006E46FE /* Debug */,
+				101FD6322210C606006E46FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		101FD6332210C606006E46FE /* Build configuration list for PBXNativeTarget "DALIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				101FD6342210C606006E46FE /* Debug */,
+				101FD6352210C606006E46FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 101FD5F92210C603006E46FE /* Project object */;
+}
