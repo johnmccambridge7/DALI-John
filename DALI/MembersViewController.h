@@ -14,10 +14,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *back;
 @property (weak, nonatomic) NSArray *tableData;
 @property (nonatomic, strong) NSArray *cacheData;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic) NSMutableArray *names;
 @property (strong, nonatomic) NSMutableArray *messages;
 @property (strong, nonatomic) NSMutableArray *urls;
+
+@property NSInteger *tableLimit;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segment;
 
 @end
 
