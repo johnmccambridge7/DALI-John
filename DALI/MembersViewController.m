@@ -11,31 +11,6 @@
 
 @interface MembersViewController ()
 @end
-
-@implementation NSString (NSString_Extended)
-
-- (NSString *)urlencode {
-    NSMutableString *output = [NSMutableString string];
-    const unsigned char *source = (const unsigned char *)[self UTF8String];
-    int sourceLen = strlen((const char *)source);
-    for (int i = 0; i < sourceLen; ++i) {
-        const unsigned char thisChar = source[i];
-        if (thisChar == ' '){
-            [output appendString:@"+"];
-        } else if (thisChar == '.' || thisChar == '-' || thisChar == '_' || thisChar == '~' ||
-                   (thisChar >= 'a' && thisChar <= 'z') ||
-                   (thisChar >= 'A' && thisChar <= 'Z') ||
-                   (thisChar >= '0' && thisChar <= '9')) {
-            [output appendFormat:@"%c", thisChar];
-        } else {
-            [output appendFormat:@"%%%02X", thisChar];
-        }
-    }
-    return output;
-}
-
-@end
-
 @implementation MembersViewController
 
 - (void)viewDidLoad {
@@ -65,65 +40,87 @@
 }
 
 - (IBAction)sort:(id)sender {
-    // 0 == Project
-    // 1 == Term
-    NSMutableDictionary *projects = [[NSMutableDictionary alloc] init];
+    self.names = [[NSMutableArray alloc] init];
+    self.messages = [[NSMutableArray alloc] init];
+    self.urls = [[NSMutableArray alloc] init];
     
-    for(int i = 0; i < self.cacheData.count; i++) {
-        NSDictionary *person = [self.cacheData objectAtIndex:i];
-        NSArray *p = [person objectForKey:@"project"];
+    NSDictionary *newTableData = @{};
+    
+    if(![[self.segment titleForSegmentAtIndex:self.segment.selectedSegmentIndex] isEqualToString:@"All"]) {
+        
+        if([[self.segment titleForSegmentAtIndex:self.segment.selectedSegmentIndex] isEqualToString:@"Project"]) {
+            newTableData = [self groupDictionary:self.cacheData groupBy:@"project"];
+        } else if([[self.segment titleForSegmentAtIndex:self.segment.selectedSegmentIndex] isEqualToString:@"Term"]) {
+            newTableData = [self groupDictionary:self.cacheData groupBy:@"terms_on"];
+        }
+        
+        for(NSString *key in newTableData) {
+            for(NSArray *person in [newTableData objectForKey:key]) {
+                
+                NSArray *pn = [person objectAtIndex:0];
+                NSString *name = [pn objectAtIndex:0];
+                NSString *icon = [pn objectAtIndex:2];
+                
+                [self.names addObject:name];
+                [self.messages addObject:key];
+                [self.urls addObject:icon];
+                
+            }
+        }
+        
+    } else {
+        for(int i = 0; i < self.cacheData.count; i++) {
+            NSDictionary *person = [self.cacheData objectAtIndex:i];
+            NSString *name = [person objectForKey:@"name"];
+            NSString *message = [person objectForKey:@"message"];
+            NSString *icon = [person objectForKey:@"iconUrl"];
+            [self.names addObject:name];
+            [self.messages addObject:message];
+            [self.urls addObject:icon];
+        }
+    }
+    
+    self.tableLimit = (NSInteger *) [self.names count];
+    
+    [self.tableView reloadData];
+}
+
+- (NSDictionary *) groupDictionary:(NSArray *)cache groupBy:(NSString *)key {
+    NSMutableDictionary *groupedDictionary = [[NSMutableDictionary alloc] init];
+    
+    // sorts the main cache file into project groups
+    for(int i = 0; i < cache.count; i++) {
+        NSDictionary *person = [cache objectAtIndex:i];
+        NSArray *grouping_keys = [person objectForKey:key];
         
         NSString *name = [person objectForKey:@"name"];
         NSString *message = [person objectForKey:@"message"];
         NSString *icon = [person objectForKey:@"iconUrl"];
         
-        for(NSString *project in p) {
-            NSArray *ma = [NSArray arrayWithObject:@[name, message, icon]];
-            NSString *key = project;
+        NSArray *personal_information = [NSArray arrayWithObject:@[name, message, icon]];
+
+        for(NSString *k in grouping_keys) {
             
-            if([key isEqualToString:@""]) {
-                key = @"Currently not working on a project.";
+            NSString *dictionaryKey = k;
+            
+            if([dictionaryKey isEqualToString:@""]) {
+                dictionaryKey = @"Currently not working on a project.";
             }
             
-            if([projects objectForKey:key] == nil) {
-                NSMutableArray *hold = [[NSMutableArray alloc] init];
-                
-                [hold addObject:ma];
-                
-                [projects setObject:hold forKey:key];
+            if([groupedDictionary objectForKey:dictionaryKey] == nil) {
+                NSMutableArray *empty = [[NSMutableArray alloc] init];
+                [empty addObject:personal_information];
+                [groupedDictionary setObject:empty forKey:dictionaryKey];
             } else {
-                NSMutableArray *hold = [projects objectForKey:key];
-                
-                [hold addObject:ma];
-                
-                [projects setObject:hold forKey:key];
+                NSMutableArray *group_list = [groupedDictionary objectForKey:dictionaryKey];
+                [group_list addObject:personal_information];
+                [groupedDictionary setObject:group_list forKey:dictionaryKey];
             }
         }
         
     }
-    
-    self.names = [[NSMutableArray alloc] init];
-    self.messages = [[NSMutableArray alloc] init];
-    self.urls = [[NSMutableArray alloc] init];
-    
-    for(NSString *key in projects) {
-        for(NSArray *person in [projects objectForKey:key]) {
-            NSArray *pn = [person objectAtIndex:0];
-            NSString *name = [pn objectAtIndex:0];
-            NSString *icon = [pn objectAtIndex:2];
-            [self.names addObject:name];
-            [self.messages addObject:key];
-            [self.urls addObject:icon];
-        }
-    }
-    
-    self.tableLimit = [self.names count];
-    
-    [self.tableView reloadData];
-    
-    NSLog(@"item changed");
-    NSLog(@"%@", self.names);
-    NSLog(@"%@", self.messages);
+
+    return groupedDictionary;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -143,7 +140,7 @@
     }
     
     cell.nameLabel.text = [self.names objectAtIndex:indexPath.row];
-    cell.thumbnailImageView.image = [UIImage imageNamed:@"projects.png"];
+    cell.thumbnailImageView.image = [UIImage imageNamed:@"placeholder.png"];
     cell.message.text = [self.messages objectAtIndex:indexPath.row];
     
     NSString *image_location = [self.urls objectAtIndex:indexPath.row];

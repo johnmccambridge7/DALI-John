@@ -15,6 +15,7 @@
 		10032DFF221102FB007FA339 /* MembersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10032DFE221102FB007FA339 /* MembersViewController.m */; };
 		10032E0122110DBB007FA339 /* SimpleTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10032E0022110DBA007FA339 /* SimpleTableCell.xib */; };
 		10032E0422110EE6007FA339 /* SimpleTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10032E0322110EE6007FA339 /* SimpleTableCell.m */; };
+		10032E06221148B2007FA339 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 10032E05221148B2007FA339 /* placeholder.png */; };
 		101FD6062210C603006E46FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 101FD6052210C603006E46FE /* AppDelegate.m */; };
 		101FD6092210C603006E46FE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 101FD6082210C603006E46FE /* ViewController.m */; };
 		101FD60C2210C603006E46FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101FD60A2210C603006E46FE /* Main.storyboard */; };
@@ -56,6 +57,7 @@
 		10032E0022110DBA007FA339 /* SimpleTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleTableCell.xib; sourceTree = "<group>"; };
 		10032E0222110EE6007FA339 /* SimpleTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleTableCell.h; sourceTree = "<group>"; };
 		10032E0322110EE6007FA339 /* SimpleTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleTableCell.m; sourceTree = "<group>"; };
+		10032E05221148B2007FA339 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		101FD6012210C603006E46FE /* DALI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DALI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		101FD6042210C603006E46FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		101FD6052210C603006E46FE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -130,7 +132,7 @@
 		101FD6032210C603006E46FE /* DALI */ = {
 			isa = PBXGroup;
 			children = (
-				10032DFB2210FF4A007FA339 /* projects.png */,
+				10032E05221148B2007FA339 /* placeholder.png */,
 				101FD6362210CDAC006E46FE /* res */,
 				101FD6042210C603006E46FE /* AppDelegate.h */,
 				101FD6052210C603006E46FE /* AppDelegate.m */,
@@ -171,6 +173,7 @@
 		101FD6362210CDAC006E46FE /* res */ = {
 			isa = PBXGroup;
 			children = (
+				10032DFB2210FF4A007FA339 /* projects.png */,
 				10032DF62210FB16007FA339 /* OpenSans-Bold.ttf */,
 				10032DF52210FB16007FA339 /* OpenSans-Light.ttf */,
 				10032DF32210FB16007FA339 /* OpenSans-Regular.ttf */,
@@ -304,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				101FD63A2210CDAC006E46FE /* app_header.png in Resources */,
+				10032E06221148B2007FA339 /* placeholder.png in Resources */,
 				10032DFA2210FBF0007FA339 /* OpenSans-SemiBold.ttf in Resources */,
 				101FD6112210C605006E46FE /* LaunchScreen.storyboard in Resources */,
 				10032E0122110DBB007FA339 /* SimpleTableCell.xib in Resources */,

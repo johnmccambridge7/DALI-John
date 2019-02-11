@@ -7,6 +7,7 @@
 //
 
 #import "SimpleTableCell.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation SimpleTableCell
 
@@ -17,6 +18,10 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    [self.thumbnailImageView.layer setShadowColor:[UIColor lightGrayColor].CGColor];
+    [self.thumbnailImageView.layer setShadowOpacity:0.8];
+    [self.thumbnailImageView.layer setShadowRadius:3.0];
+    [self.thumbnailImageView.layer setShadowOffset:CGSizeMake(2.0, 2.0)];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
