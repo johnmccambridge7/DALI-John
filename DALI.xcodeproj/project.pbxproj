@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10032DF72210FBEA007FA339 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10032DF62210FB16007FA339 /* OpenSans-Bold.ttf */; };
+		10032DF82210FBEC007FA339 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10032DF52210FB16007FA339 /* OpenSans-Light.ttf */; };
+		10032DF92210FBEE007FA339 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10032DF32210FB16007FA339 /* OpenSans-Regular.ttf */; };
+		10032DFA2210FBF0007FA339 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10032DF42210FB16007FA339 /* OpenSans-SemiBold.ttf */; };
+		10032DFC2210FF4A007FA339 /* projects.png in Resources */ = {isa = PBXBuildFile; fileRef = 10032DFB2210FF4A007FA339 /* projects.png */; };
 		101FD6062210C603006E46FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 101FD6052210C603006E46FE /* AppDelegate.m */; };
 		101FD6092210C603006E46FE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 101FD6082210C603006E46FE /* ViewController.m */; };
 		101FD60C2210C603006E46FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101FD60A2210C603006E46FE /* Main.storyboard */; };
@@ -38,6 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		10032DF32210FB16007FA339 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		10032DF42210FB16007FA339 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		10032DF52210FB16007FA339 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		10032DF62210FB16007FA339 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		10032DFB2210FF4A007FA339 /* projects.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = projects.png; sourceTree = "<group>"; };
 		101FD6012210C603006E46FE /* DALI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DALI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		101FD6042210C603006E46FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		101FD6052210C603006E46FE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -147,8 +157,13 @@
 		101FD6362210CDAC006E46FE /* res */ = {
 			isa = PBXGroup;
 			children = (
+				10032DF62210FB16007FA339 /* OpenSans-Bold.ttf */,
+				10032DF52210FB16007FA339 /* OpenSans-Light.ttf */,
+				10032DF32210FB16007FA339 /* OpenSans-Regular.ttf */,
+				10032DF42210FB16007FA339 /* OpenSans-SemiBold.ttf */,
 				101FD6372210CDAC006E46FE /* dali_logo.png */,
 				101FD6382210CDAC006E46FE /* app_header.png */,
+				10032DFB2210FF4A007FA339 /* projects.png */,
 			);
 			path = res;
 			sourceTree = SOURCE_ROOT;
@@ -276,9 +291,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				101FD63A2210CDAC006E46FE /* app_header.png in Resources */,
+				10032DFA2210FBF0007FA339 /* OpenSans-SemiBold.ttf in Resources */,
 				101FD6112210C605006E46FE /* LaunchScreen.storyboard in Resources */,
+				10032DF82210FBEC007FA339 /* OpenSans-Light.ttf in Resources */,
+				10032DF72210FBEA007FA339 /* OpenSans-Bold.ttf in Resources */,
+				10032DFC2210FF4A007FA339 /* projects.png in Resources */,
 				101FD60E2210C605006E46FE /* Assets.xcassets in Resources */,
 				101FD6392210CDAC006E46FE /* dali_logo.png in Resources */,
+				10032DF92210FBEE007FA339 /* OpenSans-Regular.ttf in Resources */,
 				101FD60C2210C603006E46FE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

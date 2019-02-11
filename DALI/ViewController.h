@@ -13,6 +13,7 @@
 @property (weak, nonatomic) NSArray *cache;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 @property (weak, nonatomic) IBOutlet UILabel *count;
+@property (weak, nonatomic) IBOutlet UIImageView *members;
 
 @end
 

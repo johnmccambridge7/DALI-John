@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <QuartzCore/QuartzCore.h>
 #import <GoogleMaps/GoogleMaps.h>
 
 @interface ViewController ()
@@ -16,8 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-
     
     [self fetchJSON];
 }
@@ -69,7 +68,7 @@
             
             self.cache = array;
             
-            self.count.text = [NSString stringWithFormat:@"%lu", (unsigned long)self.cache.count];
+            self.count.text = @"-";
             
             NSMutableArray *points = [[NSMutableArray alloc] init];
             NSMutableArray *info = [[NSMutableArray alloc] init];
@@ -87,10 +86,13 @@
             
             [self initMap:points info:info messages:messages];
             
-            float animationPeriod = 10;
+            float animationPeriod = 2;
+            
+            int limit = (int) self.cache.count;
+            
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-                for (int i = 1; i < 101; i ++) {
-                    usleep(animationPeriod/100 * 1000000); // sleep in microseconds
+                for (int i = 1; i < limit; i ++) {
+                    usleep(animationPeriod/limit * 1000000); // sleep in microseconds
                     dispatch_async(dispatch_get_main_queue(), ^{
                         self.count.text = [NSString stringWithFormat:@"%d", i];
                     });
@@ -109,12 +111,24 @@
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
+    
+    
+    UIView *v = self.mapView;
+    
+    [v.layer setShadowColor:[UIColor lightGrayColor].CGColor];
+    [v.layer setShadowOpacity:0.8];
+    [v.layer setShadowRadius:3.0];
+    [v.layer setShadowOffset:CGSizeMake(2.0, 2.0)];
+    
+    [self.members.layer setShadowColor:[UIColor blackColor].CGColor];
+    [self.members.layer setShadowOpacity:0.8];
+    [self.members.layer setShadowRadius:3.0];
+    [self.members.layer setShadowOffset:CGSizeMake(2.0, 2.0)];
 }
 
 - (void) initMap:(NSMutableArray *) points info:(NSMutableArray *) info messages:(NSMutableArray *) messages {
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:39.50
-                                                            longitude:-98.35
-                                                                 zoom:2];
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:39.50                       longitude:-98.35
+        zoom:2];
     CGRect f = CGRectMake(0, 0, self.mapView.frame.size.width, self.mapView.frame.size.height);
     GMSMapView *mv = [GMSMapView mapWithFrame:f camera:camera];
     mv.myLocationEnabled = YES;
