@@ -10,7 +10,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MembersViewController : UIViewController
+@interface MembersViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@property (weak, nonatomic) IBOutlet UIButton *back;
+@property (weak, nonatomic) NSArray *tableData;
+@property (nonatomic, strong) NSArray *cacheData;
+
+@property (strong, nonatomic) NSMutableArray *names;
+@property (strong, nonatomic) NSMutableArray *messages;
+@property (strong, nonatomic) NSMutableArray *urls;
 
 @end
 

@@ -12,6 +12,9 @@
 		10032DF92210FBEE007FA339 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10032DF32210FB16007FA339 /* OpenSans-Regular.ttf */; };
 		10032DFA2210FBF0007FA339 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 10032DF42210FB16007FA339 /* OpenSans-SemiBold.ttf */; };
 		10032DFC2210FF4A007FA339 /* projects.png in Resources */ = {isa = PBXBuildFile; fileRef = 10032DFB2210FF4A007FA339 /* projects.png */; };
+		10032DFF221102FB007FA339 /* MembersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10032DFE221102FB007FA339 /* MembersViewController.m */; };
+		10032E0122110DBB007FA339 /* SimpleTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10032E0022110DBA007FA339 /* SimpleTableCell.xib */; };
+		10032E0422110EE6007FA339 /* SimpleTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10032E0322110EE6007FA339 /* SimpleTableCell.m */; };
 		101FD6062210C603006E46FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 101FD6052210C603006E46FE /* AppDelegate.m */; };
 		101FD6092210C603006E46FE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 101FD6082210C603006E46FE /* ViewController.m */; };
 		101FD60C2210C603006E46FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 101FD60A2210C603006E46FE /* Main.storyboard */; };
@@ -48,6 +51,11 @@
 		10032DF52210FB16007FA339 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		10032DF62210FB16007FA339 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		10032DFB2210FF4A007FA339 /* projects.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = projects.png; sourceTree = "<group>"; };
+		10032DFD221102FB007FA339 /* MembersViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MembersViewController.h; sourceTree = "<group>"; };
+		10032DFE221102FB007FA339 /* MembersViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MembersViewController.m; sourceTree = "<group>"; };
+		10032E0022110DBA007FA339 /* SimpleTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleTableCell.xib; sourceTree = "<group>"; };
+		10032E0222110EE6007FA339 /* SimpleTableCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleTableCell.h; sourceTree = "<group>"; };
+		10032E0322110EE6007FA339 /* SimpleTableCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleTableCell.m; sourceTree = "<group>"; };
 		101FD6012210C603006E46FE /* DALI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DALI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		101FD6042210C603006E46FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		101FD6052210C603006E46FE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -122,11 +130,17 @@
 		101FD6032210C603006E46FE /* DALI */ = {
 			isa = PBXGroup;
 			children = (
+				10032DFB2210FF4A007FA339 /* projects.png */,
 				101FD6362210CDAC006E46FE /* res */,
 				101FD6042210C603006E46FE /* AppDelegate.h */,
 				101FD6052210C603006E46FE /* AppDelegate.m */,
 				101FD6072210C603006E46FE /* ViewController.h */,
 				101FD6082210C603006E46FE /* ViewController.m */,
+				10032DFD221102FB007FA339 /* MembersViewController.h */,
+				10032DFE221102FB007FA339 /* MembersViewController.m */,
+				10032E0022110DBA007FA339 /* SimpleTableCell.xib */,
+				10032E0222110EE6007FA339 /* SimpleTableCell.h */,
+				10032E0322110EE6007FA339 /* SimpleTableCell.m */,
 				101FD60A2210C603006E46FE /* Main.storyboard */,
 				101FD60D2210C605006E46FE /* Assets.xcassets */,
 				101FD60F2210C605006E46FE /* LaunchScreen.storyboard */,
@@ -163,7 +177,6 @@
 				10032DF42210FB16007FA339 /* OpenSans-SemiBold.ttf */,
 				101FD6372210CDAC006E46FE /* dali_logo.png */,
 				101FD6382210CDAC006E46FE /* app_header.png */,
-				10032DFB2210FF4A007FA339 /* projects.png */,
 			);
 			path = res;
 			sourceTree = SOURCE_ROOT;
@@ -293,6 +306,7 @@
 				101FD63A2210CDAC006E46FE /* app_header.png in Resources */,
 				10032DFA2210FBF0007FA339 /* OpenSans-SemiBold.ttf in Resources */,
 				101FD6112210C605006E46FE /* LaunchScreen.storyboard in Resources */,
+				10032E0122110DBB007FA339 /* SimpleTableCell.xib in Resources */,
 				10032DF82210FBEC007FA339 /* OpenSans-Light.ttf in Resources */,
 				10032DF72210FBEA007FA339 /* OpenSans-Bold.ttf in Resources */,
 				10032DFC2210FF4A007FA339 /* projects.png in Resources */,
@@ -373,8 +387,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10032DFF221102FB007FA339 /* MembersViewController.m in Sources */,
 				101FD6092210C603006E46FE /* ViewController.m in Sources */,
 				101FD6142210C605006E46FE /* main.m in Sources */,
+				10032E0422110EE6007FA339 /* SimpleTableCell.m in Sources */,
 				101FD6062210C603006E46FE /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

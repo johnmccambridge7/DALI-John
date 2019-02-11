@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "MembersViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import <GoogleMaps/GoogleMaps.h>
 
@@ -18,7 +19,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.members.userInteractionEnabled = YES;
+    
+    UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self  action:@selector(members:)];
+    
+    recognizer.numberOfTapsRequired = 1;
+    
+    [self.members addGestureRecognizer:recognizer];
+    
     [self fetchJSON];
+}
+
+- (void) members:(id) sender {
+    [self performSegueWithIdentifier:@"members" sender:self];
 }
 
 - (void) fetchJSON {
@@ -68,6 +81,9 @@
             
             self.cache = array;
             
+            NSLog(@"%@", array);
+            NSLog(@"%@", self.cache);
+            
             self.count.text = @"-";
             
             NSMutableArray *points = [[NSMutableArray alloc] init];
@@ -86,13 +102,15 @@
             
             [self initMap:points info:info messages:messages];
             
+            // animate the number of DALI users
+            
             float animationPeriod = 2;
             
             int limit = (int) self.cache.count;
             
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
                 for (int i = 1; i < limit; i ++) {
-                    usleep(animationPeriod/limit * 1000000); // sleep in microseconds
+                    usleep(animationPeriod/limit * 1000000);
                     dispatch_async(dispatch_get_main_queue(), ^{
                         self.count.text = [NSString stringWithFormat:@"%d", i];
                     });
@@ -112,10 +130,11 @@
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
+    // setup views and subviews and do cosmetic stuff
     
     UIView *v = self.mapView;
     
-    [v.layer setShadowColor:[UIColor lightGrayColor].CGColor];
+    [v.layer setShadowColor:[UIColor blackColor].CGColor];
     [v.layer setShadowOpacity:0.8];
     [v.layer setShadowRadius:3.0];
     [v.layer setShadowOffset:CGSizeMake(2.0, 2.0)];
@@ -132,13 +151,11 @@
     CGRect f = CGRectMake(0, 0, self.mapView.frame.size.width, self.mapView.frame.size.height);
     GMSMapView *mv = [GMSMapView mapWithFrame:f camera:camera];
     mv.myLocationEnabled = YES;
-    //
+
     [self.mapView addSubview:mv];
     
-    // Creates a marker in the center of the map.
     for(int i=1; i < points.count; i++) {
         GMSMarker *marker = [[GMSMarker alloc] init];
-        NSLog(@"%f", [[[points objectAtIndex:i] objectAtIndex:0] doubleValue]);
         marker.position = CLLocationCoordinate2DMake([[[points objectAtIndex:i] objectAtIndex:0] doubleValue], [[[points objectAtIndex:i] objectAtIndex:1] doubleValue]);
         marker.title = [info objectAtIndex:i];
         marker.snippet = [messages objectAtIndex:i];
@@ -147,8 +164,12 @@
 
 }
 
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    MembersViewController *controller = (MembersViewController *) [segue destinationViewController];
+    controller.cacheData = self.cache;
+}
+
 - (void) startLoading {
-    
     self.spinner.alpha = 1.0f;
     self.view.userInteractionEnabled = NO;
     self.view.alpha = 0.3f;
