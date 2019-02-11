@@ -10,7 +10,9 @@
 
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIView *mapView;
-
+@property (weak, nonatomic) NSArray *cache;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
+@property (weak, nonatomic) IBOutlet UILabel *count;
 
 @end
 

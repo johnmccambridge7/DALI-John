@@ -66,6 +66,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="PvI-sG-Jd2">
+                                <rect key="frame" x="177" y="304" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.2929069995880127" green="0.62624609470367432" blue="0.86669021844863892" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -75,7 +78,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jGI-fj-Oxx" secondAttribute="trailing" constant="24" id="7E1-kI-444"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E9b-NV-AQ6" secondAttribute="trailing" constant="24" id="8tj-vG-Rt8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mh2-wG-lDl" secondAttribute="trailing" constant="24" id="9aX-C0-gEN"/>
+                            <constraint firstItem="PvI-sG-Jd2" firstAttribute="top" secondItem="KXA-wC-K48" secondAttribute="bottom" constant="8" id="DBr-SN-lB1"/>
                             <constraint firstItem="KXA-wC-K48" firstAttribute="width" secondItem="mh2-wG-lDl" secondAttribute="width" id="Esz-mo-Q1I"/>
+                            <constraint firstItem="E9b-NV-AQ6" firstAttribute="top" secondItem="PvI-sG-Jd2" secondAttribute="bottom" constant="22" id="FrN-8z-yVc"/>
                             <constraint firstItem="KXA-wC-K48" firstAttribute="height" secondItem="mh2-wG-lDl" secondAttribute="height" id="HOk-aO-FHF"/>
                             <constraint firstItem="jGI-fj-Oxx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="23" id="MDe-BF-HMQ"/>
                             <constraint firstItem="jGI-fj-Oxx" firstAttribute="top" secondItem="anp-Jt-qzZ" secondAttribute="bottom" constant="33" id="O6n-rf-D9W"/>
@@ -87,7 +92,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zb8-HM-hXD" secondAttribute="trailing" constant="24" id="VVs-G2-TOr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="E9b-NV-AQ6" secondAttribute="bottom" constant="20" id="Zx4-VO-Dnb"/>
                             <constraint firstItem="E9b-NV-AQ6" firstAttribute="top" secondItem="jGI-fj-Oxx" secondAttribute="bottom" constant="8" id="cEQ-qq-QTk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PvI-sG-Jd2" secondAttribute="trailing" constant="178" id="hWT-7q-crI"/>
                             <constraint firstItem="anp-Jt-qzZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="hWg-oP-SAL"/>
+                            <constraint firstItem="PvI-sG-Jd2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="177" id="iKR-FI-Vas"/>
                             <constraint firstItem="mh2-wG-lDl" firstAttribute="top" secondItem="KXA-wC-K48" secondAttribute="top" id="jzv-9b-TO0"/>
                             <constraint firstItem="jGI-fj-Oxx" firstAttribute="top" secondItem="Zb8-HM-hXD" secondAttribute="bottom" constant="33" id="nn0-Ln-Grc"/>
                             <constraint firstItem="mh2-wG-lDl" firstAttribute="leading" secondItem="KXA-wC-K48" secondAttribute="trailing" constant="8" id="qot-xI-0bD"/>
@@ -95,7 +102,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="count" destination="mh2-wG-lDl" id="tFZ-HI-DVr"/>
                         <outlet property="mapView" destination="E9b-NV-AQ6" id="rXc-GT-nKu"/>
+                        <outlet property="spinner" destination="PvI-sG-Jd2" id="J2n-6Y-KcB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
