@@ -16,7 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.username.text = self.sentUsername;
+    self.message.text = self.sentMessage;
 }
+
 
 @end

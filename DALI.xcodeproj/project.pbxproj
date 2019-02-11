@@ -26,7 +26,7 @@
 		101FD6292210C606006E46FE /* DALIUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 101FD6282210C606006E46FE /* DALIUITests.m */; };
 		101FD6392210CDAC006E46FE /* dali_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 101FD6372210CDAC006E46FE /* dali_logo.png */; };
 		101FD63A2210CDAC006E46FE /* app_header.png in Resources */ = {isa = PBXBuildFile; fileRef = 101FD6382210CDAC006E46FE /* app_header.png */; };
-		10E9E9AE221159D800A7B895 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E9E9AD221159D800A7B895 /* ProfileViewController.m */; };
+		10EF0B812211648700824669 /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10EF0B802211648700824669 /* UserViewController.m */; };
 		60832AD999C2C026A47DCE24 /* libPods-DALI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E0D96FC30018C4949FCCD7BE /* libPods-DALI.a */; };
 /* End PBXBuildFile section */
 
@@ -77,8 +77,8 @@
 		101FD62A2210C606006E46FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		101FD6372210CDAC006E46FE /* dali_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dali_logo.png; sourceTree = "<group>"; };
 		101FD6382210CDAC006E46FE /* app_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_header.png; sourceTree = "<group>"; };
-		10E9E9AC221159D800A7B895 /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = ../ProfileViewController.h; sourceTree = "<group>"; };
-		10E9E9AD221159D800A7B895 /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = ../ProfileViewController.m; sourceTree = "<group>"; };
+		10EF0B7F2211648700824669 /* UserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		10EF0B802211648700824669 /* UserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
 		249954E671B24ECA528546EA /* Pods-DALI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DALI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DALI/Pods-DALI.debug.xcconfig"; sourceTree = "<group>"; };
 		C7D850C1E5E45A3928BB29F4 /* Pods-DALI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DALI.release.xcconfig"; path = "Pods/Target Support Files/Pods-DALI/Pods-DALI.release.xcconfig"; sourceTree = "<group>"; };
 		E0D96FC30018C4949FCCD7BE /* libPods-DALI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DALI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,8 +141,8 @@
 				101FD6052210C603006E46FE /* AppDelegate.m */,
 				101FD6072210C603006E46FE /* ViewController.h */,
 				101FD6082210C603006E46FE /* ViewController.m */,
-				10E9E9AC221159D800A7B895 /* ProfileViewController.h */,
-				10E9E9AD221159D800A7B895 /* ProfileViewController.m */,
+				10EF0B7F2211648700824669 /* UserViewController.h */,
+				10EF0B802211648700824669 /* UserViewController.m */,
 				10032DFD221102FB007FA339 /* MembersViewController.h */,
 				10032DFE221102FB007FA339 /* MembersViewController.m */,
 				10032E0022110DBA007FA339 /* SimpleTableCell.xib */,
@@ -396,11 +396,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10EF0B812211648700824669 /* UserViewController.m in Sources */,
 				10032DFF221102FB007FA339 /* MembersViewController.m in Sources */,
 				101FD6092210C603006E46FE /* ViewController.m in Sources */,
 				101FD6142210C605006E46FE /* main.m in Sources */,
 				10032E0422110EE6007FA339 /* SimpleTableCell.m in Sources */,
-				10E9E9AE221159D800A7B895 /* ProfileViewController.m in Sources */,
 				101FD6062210C603006E46FE /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

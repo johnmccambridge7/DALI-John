@@ -149,7 +149,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2R-y2-9ee">
-                                <rect key="frame" x="16" y="31" width="38" height="31"/>
+                                <rect key="frame" x="16" y="31" width="56" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="G3M-qF-P8u"/>
                                 </constraints>
@@ -228,7 +228,7 @@
                             <constraint firstItem="Mjp-I7-yUW" firstAttribute="top" secondItem="9NM-rB-2s0" secondAttribute="top" constant="14" id="htX-SC-57m"/>
                             <constraint firstItem="igU-Eg-Rpz" firstAttribute="top" secondItem="Mjp-I7-yUW" secondAttribute="bottom" constant="7" id="uhM-vG-VkT"/>
                             <constraint firstItem="APb-g4-Qj4" firstAttribute="top" secondItem="igU-Eg-Rpz" secondAttribute="bottom" constant="7" id="uvO-et-472"/>
-                            <constraint firstItem="Mjp-I7-yUW" firstAttribute="leading" secondItem="l2R-y2-9ee" secondAttribute="trailing" constant="9" id="v7w-Kb-CLu"/>
+                            <constraint firstItem="Mjp-I7-yUW" firstAttribute="leading" secondItem="l2R-y2-9ee" secondAttribute="trailing" constant="-9" id="v7w-Kb-CLu"/>
                             <constraint firstItem="9NM-rB-2s0" firstAttribute="bottom" secondItem="APb-g4-Qj4" secondAttribute="bottom" constant="20" id="vwI-gq-PvF"/>
                             <constraint firstItem="APb-g4-Qj4" firstAttribute="leading" secondItem="9NM-rB-2s0" secondAttribute="leading" constant="16" id="zaS-FR-0Zg"/>
                         </constraints>
@@ -246,10 +246,10 @@
             </objects>
             <point key="canvasLocation" x="848.79999999999995" y="132.68365817091455"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--User View Controller-->
         <scene sceneID="M8r-X6-FCl">
             <objects>
-                <viewController id="j3y-g3-0dB" customClass="ProfileViewController" sceneMemberID="viewController">
+                <viewController id="j3y-g3-0dB" customClass="UserViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OzR-IE-K46">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -261,6 +261,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="back:" destination="j3y-g3-0dB" eventType="touchUpInside" id="0Xz-N8-EG5"/>
                                     <action selector="back:" destination="Ozd-E2-HE0" eventType="touchUpInside" id="TaR-Is-0iu"/>
                                 </connections>
                             </button>
@@ -337,12 +338,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="vrw-vZ-rQ3"/>
                     <connections>
-                        <outlet property="bio" destination="Qtc-6w-9uU" id="FlW-nd-IJt"/>
-                        <outlet property="img" destination="Fbu-pY-qfI" id="U6d-4J-ZLH"/>
-                        <outlet property="mapLabel" destination="ueX-eV-a3V" id="iqZ-zS-ev8"/>
-                        <outlet property="mapView" destination="Tny-vG-Bde" id="MJ0-mY-y2g"/>
-                        <outlet property="message" destination="D9T-68-n3O" id="cv6-gL-n1Z"/>
-                        <outlet property="username" destination="9Dt-Th-HDm" id="tN6-RY-ayi"/>
+                        <outlet property="bio" destination="Qtc-6w-9uU" id="L5e-Ak-5pI"/>
+                        <outlet property="img" destination="Fbu-pY-qfI" id="iIQ-Wr-fhe"/>
+                        <outlet property="mapLabel" destination="ueX-eV-a3V" id="lfx-BT-d14"/>
+                        <outlet property="mapView" destination="Tny-vG-Bde" id="4NT-I0-6oi"/>
+                        <outlet property="message" destination="D9T-68-n3O" id="ua8-zg-CpQ"/>
+                        <outlet property="username" destination="9Dt-Th-HDm" id="sJE-LZ-F10"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="046-lV-O5e" userLabel="First Responder" sceneMemberID="firstResponder"/>

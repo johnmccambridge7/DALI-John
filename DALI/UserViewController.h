@@ -1,5 +1,5 @@
 //
-//  ProfileViewController.h
+//  UserViewController.h
 //  DALI
 //
 //  Created by John MacDonald on 2/11/19.
@@ -10,10 +10,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ProfileViewController : UIViewController
-
+@interface UserViewController : UIViewController
 @property (strong, nonatomic) NSString *sentUsername;
 @property (strong, nonatomic) NSString *sentMessage;
+@property (strong, nonatomic) NSString *sentBio;
+@property (strong, nonatomic) NSString *sentLabel;
+@property (strong, nonatomic) NSURL *sentIcon;
+@property (strong, nonatomic) NSArray *sentPoint;
+
 
 @property (weak, nonatomic) IBOutlet UIImageView *img;
 @property (weak, nonatomic) IBOutlet UILabel *username;

@@ -8,7 +8,7 @@
 
 #import "MembersViewController.h"
 #import "SimpleTableCell.h"
-#import "ProfileViewController.h"
+#import "UserViewController.h"
 
 @interface MembersViewController ()
 @end
@@ -178,12 +178,39 @@
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    //NSDictionary *userInfo = (NSDictionary *) sender;
-    ProfileViewController *controller = (ProfileViewController *) [segue destinationViewController];
+    NSDictionary *userInfo = (NSDictionary *) sender;
+    UserViewController *controller = (UserViewController *) [segue destinationViewController];
+    controller.sentUsername = [userInfo objectForKey:@"name"];
+    controller.sentMessage = [userInfo objectForKey:@"message"];
     
-    controller.
+    NSString *projects = [[userInfo objectForKey:@"project"] componentsJoinedByString:@" and "];
+    
+    NSString *terms = [[userInfo objectForKey:@"terms_on"] componentsJoinedByString:@","];
+    
+    NSString *bio;
+    
+    if(![projects isEqualToString:@""]) {
+        bio = [NSString stringWithFormat:@"Currently, %@ is working on projects like %@. They are involved with DALI during the following terms: %@", [userInfo objectForKey:@"name"], projects, terms];
+    } else {
+        bio = [NSString stringWithFormat:@"Currently, %@ is not working on a project. They are involved with DALI during the following terms: %@", [userInfo objectForKey:@"name"], terms];
+    }
+    
+    NSString *mapLabel = [NSString stringWithFormat:@"Where is %@ from?", [userInfo objectForKey:@"name"]];
+    
+    NSString *image_location = [userInfo objectForKey:@"iconUrl"];
+    NSString *unencoded_url = [NSString stringWithFormat:@"https://raw.githubusercontent.com/dali-lab/mappy/gh-pages/%@", image_location];
+    NSString *encoded_url = [unencoded_url stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+    
+    NSURL *url = [NSURL URLWithString:encoded_url];
+    
+    controller.sentLabel = mapLabel;
+    controller.sentBio = bio;
+    controller.sentIcon = url;
+    controller.sentPoint = [userInfo objectForKey:@"lat_long"];
     
 }
+
+
 
 - (NSDictionary *) getInformation:(NSString *)n {
     for(int i = 0; i < self.cacheData.count; i++) {
