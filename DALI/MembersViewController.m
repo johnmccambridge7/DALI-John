@@ -8,6 +8,7 @@
 
 #import "MembersViewController.h"
 #import "SimpleTableCell.h"
+#import "ProfileViewController.h"
 
 @interface MembersViewController ()
 @end
@@ -36,7 +37,6 @@
 }
 - (IBAction)back:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
-
 }
 
 - (IBAction)sort:(id)sender {
@@ -143,6 +143,8 @@
     cell.thumbnailImageView.image = [UIImage imageNamed:@"placeholder.png"];
     cell.message.text = [self.messages objectAtIndex:indexPath.row];
     
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
     NSString *image_location = [self.urls objectAtIndex:indexPath.row];
     NSString *unencoded_url = [NSString stringWithFormat:@"https://raw.githubusercontent.com/dali-lab/mappy/gh-pages/%@", image_location];
     NSString *encoded_url = [unencoded_url stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
@@ -165,6 +167,34 @@
     [task resume];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSDictionary *information = [self getInformation:[self.names objectAtIndex:indexPath.row]];
+    
+    [self performSegueWithIdentifier:@"profile" sender:information];
+
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    //NSDictionary *userInfo = (NSDictionary *) sender;
+    ProfileViewController *controller = (ProfileViewController *) [segue destinationViewController];
+    
+    controller.
+    
+}
+
+- (NSDictionary *) getInformation:(NSString *)n {
+    for(int i = 0; i < self.cacheData.count; i++) {
+        NSDictionary *person = [self.cacheData objectAtIndex:i];
+        NSString *name = [person objectForKey:@"name"];
+        if([name isEqualToString:n]) {
+            return person;
+        }
+    }
+    
+    return nil;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
