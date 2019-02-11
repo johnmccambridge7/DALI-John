@@ -19,14 +19,16 @@
     
     self.names = [[NSMutableArray alloc] init];
     self.messages = [[NSMutableArray alloc] init];
-    //NSMutableArray *urls = [[NSMutableArray alloc] init];
+    self.urls = [[NSMutableArray alloc] init];
     
     for(int i = 0; i < self.cacheData.count; i++) {
         NSDictionary *person = [self.cacheData objectAtIndex:i];
         NSString *name = [person objectForKey:@"name"];
         NSString *message = [person objectForKey:@"message"];
+        NSString *icon = [person objectForKey:@"iconUrl"];
         [self.names addObject:name];
         [self.messages addObject:message];
+        [self.urls addObject:icon];
     }
     
     NSLog(@"%@", self.cacheData);
@@ -56,6 +58,22 @@
     cell.nameLabel.text = [self.names objectAtIndex:indexPath.row];
     cell.thumbnailImageView.image = [UIImage imageNamed:@"projects.png"];
     cell.message.text = [self.messages objectAtIndex:indexPath.row];
+    
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://raw.githubusercontent.com/dali-lab/mappy/gh-pages/%@", [self.urls objectAtIndex:indexPath.row]]];
+    
+    NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (data) {
+            UIImage *image = [UIImage imageWithData:data];
+            if (image) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    SimpleTableCell *updatedCell = (SimpleTableCell *)[tableView cellForRowAtIndexPath:indexPath];
+                    if (updatedCell)
+                        updatedCell.thumbnailImageView.image = image;
+                });
+            }
+        }
+    }];
+    [task resume];
     
     return cell;
 }
